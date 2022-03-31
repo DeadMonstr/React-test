@@ -1,0 +1,50 @@
+@import "../../../styles/abstracts/variables"
+@import "../../../styles/components/buttons"
+
+
+
+.footer
+  padding: 2.5rem 3rem
+  background-image: linear-gradient(to right,$color-main-light,$color-main-dark)
+  &__item
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &-links
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 2rem
+      i
+        margin: 0 1rem
+        font-size: 3.7rem
+        color: $color-grey-dark
+        transition: all .4s ease
+        &:hover
+          color: $color-white
+        &:active
+          transform: scale(0.9)
+    &-logo
+      width: 25rem
+      height: 10rem
+
+@media (max-width: 768px)
+  .footer
+    &__item
+      &-links
+        margin-top: 4rem
+        i
+          font-size: 5rem
+      &-logo
+        width: 35rem
+        height: auto
+
+@media (max-width: 425px)
+  .footer
+    &__item
+      &-links
+        i
+          font-size: 6rem

@@ -1,0 +1,51 @@
+.gallery
+  width: 100%
+  padding: 5rem 0
+  &__wrapper
+    display: grid
+    grid-template-columns:  repeat(6, 1fr)
+    grid-template-rows:  repeat(3,20rem)
+    grid-gap: .5rem
+  &__item
+    width: 100%
+    height: 20rem
+    display: block
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &:nth-child(1)
+      grid-column: span 2
+    &:nth-child(2)
+      grid-column: span 3
+    &:nth-child(3)
+      grid-column: span 1
+    &:nth-child(4)
+      grid-column: span 4
+    &:nth-child(5)
+      grid-column: span 2
+    &:nth-child(6)
+      grid-column: span 1
+    &:nth-child(7)
+      grid-column: span 4
+    &:nth-child(8)
+      grid-column: span 1
+
+
+.popup_img
+  width: 100%
+  height: 100vh
+  position: fixed
+  left: 0
+  top: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: rgba(0, 0, 0, 0.59)
+  z-index: 300
+  img
+    width: 80%
+    object-fit: cover
+    border-radius: 15px
+    pointer-events: auto

@@ -1,0 +1,94 @@
+@import "../../../styles/abstracts/variables"
+@import "../../../styles/components/buttons"
+
+.events
+  padding: 10rem 20rem
+  &__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__item
+    width: 40rem
+    display: flex
+    flex-direction: column
+    border-radius: 15px
+    overflow: hidden
+    box-shadow: 0 4px 4px $color-grey-dark
+    margin: 3rem 0
+    &-box_1
+      height: 20rem
+      position: relative
+    &-box_2
+      padding: 1rem 2rem
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    img
+      width: 100%
+      object-fit: cover
+      height: 20rem
+    &-overlay_img
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      position: absolute
+      background-image: linear-gradient(rgba($color-main-light, .7), rgba($color-main-dark, .7))
+    &-title
+      position: absolute
+      bottom: 2rem
+      left: 2rem
+      font-size: 2.2rem
+      color: $color-white
+      font-weight: 600
+    &-desc
+      font-weight: 500
+      font-size: 1.7rem
+      color: $color-grey-dark
+      margin-bottom: 7rem
+    &-btn
+      width: fit-content
+      padding: 7px 30px
+      color: $color-white
+      background-color: $color-main-dark
+      font-size: 1.4rem
+      border-radius: 10px
+      margin-bottom: 1rem
+      cursor: pointer
+      user-select: none
+      &:hover
+        transform: translateY(-0.3rem)!important
+        box-shadow: 0 1rem 2rem rgba($color-black,.2)
+        &::after
+          transform: scaleX(1.4) scaleY(1.6)
+          opacity: 0
+      &:active
+        transform: translateY(-0.1rem)!important
+        box-shadow: 0 0.5rem 1rem rgba($color-black,.2)
+
+
+@media (max-width: 768px)
+  .events
+    &__item
+      width: 50rem
+      &-title
+        font-size: 3rem
+      &-desc
+        font-weight: 500
+        font-size: 2.3rem
+      &-btn
+        padding: 7px 25px
+        font-size: 1.9rem
+//
+//@media (max-width: 768px)
+//  .events
+//    &__item
+//      width: 45rem
+//      &-title
+//        font-size: 2.7rem
+//      &-desc
+//        font-weight: 500
+//        font-size: 2rem
+//      &-btn
+//        padding: 7px 25px
+//        font-size: 1.7rem

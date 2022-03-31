@@ -1,0 +1,35 @@
+@import "../../../styles/abstracts/variables"
+
+
+.content
+  overflow: auto
+  height: calc(100vh - #{$appHeader-height})
+  width: calc(100% - #{$appMenuBar-width})
+  padding: 30px
+  &::-webkit-scrollbar
+    width: 8px
+  &::-webkit-scrollbar-track
+    background-color: #ffffff
+  &::-webkit-scrollbar-thumb
+    cursor: pointer
+    border-radius: 5px
+    background-color: #313131
+  .hello
+    height: 100vh
+    border-radius: 10px
+    background-color: $color-grey-dark
+
+
+
+@media (max-width: 474px)
+  .content
+    overflow: auto
+    height: calc(100vh - #{$appHeader-height})
+    width: 100%
+    padding: 30px
+    &::-webkit-scrollbar
+      display: none
+    .hello
+      height: 100vh
+      border-radius: 10px
+      background-color: $color-grey-dark
